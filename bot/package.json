@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/app.js",
-    "dev": "npm install && npm run build && npm start"
+    "start": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +12,8 @@
   "devDependencies": {
     "@types/node": "^22.9.0",
     "@types/qrcode-terminal": "^0.12.2",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   },
   "dependencies": {

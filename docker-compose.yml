@@ -6,10 +6,10 @@ services:
       CHROME_PATH: /usr/bin/google-chrome-stable
       FFMPEG_PATH: /usr/bin/ffmpeg
     volumes:
+      - ./bot/src:/app/src
       - node_modules:/app/node_modules
       - wwebjs_auth:/app/.wwebjs_auth
-    command: /bin/sh -c "rm -f /app/.wwebjs_auth/session/SingletonLock && npm run dev"
-    restart: always
+    restart: unless-stopped
 
 volumes:
   node_modules:
